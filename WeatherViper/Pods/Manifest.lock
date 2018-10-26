@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.7.3)
+  - LightRoute (2.1.20)
+  - Realm (3.10.0):
+    - Realm/Headers (= 3.10.0)
+  - Realm/Headers (3.10.0)
+  - RealmSwift (3.10.0):
+    - Realm (= 3.10.0)
+  - Swinject (2.5.0)
+  - SwinjectStoryboard (2.0.2):
+    - Swinject (~> 2.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - LightRoute (from `https://github.com/SpectralDragon/LightRoute.git`)
+  - RealmSwift
+  - Swinject
+  - SwinjectStoryboard
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Realm
+    - RealmSwift
+    - Swinject
+    - SwinjectStoryboard
+
+EXTERNAL SOURCES:
+  LightRoute:
+    :git: https://github.com/SpectralDragon/LightRoute.git
+
+CHECKOUT OPTIONS:
+  LightRoute:
+    :commit: c537a7afacc290504bc73c4a893957a4e1932fb7
+    :git: https://github.com/SpectralDragon/LightRoute.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  LightRoute: aa65803a1d984be3be83651b433699077bfe6ab3
+  Realm: 85ab9e4f779d66f6e9ffeb118dc25b7f130c96ac
+  RealmSwift: 69121c8b86d0ae005fb779efdb10e606732e1c74
+  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
+  SwinjectStoryboard: 365698aec11b57c6b14a3c1f52d0308759d377bf
+
+PODFILE CHECKSUM: e13d08401a7e092cb5edf10db58b8fb1af170e30
+
+COCOAPODS: 1.6.0.beta.2
