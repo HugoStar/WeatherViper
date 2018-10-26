@@ -15,14 +15,12 @@ final class MainAssemblyContainer: Assembly {
 		container.register(MainInteractor.self) { (r, presenter: MainPresenter) in
 			let interactor = MainInteractor()
 			interactor.output = presenter
-
 			return interactor
 		}
 
 		container.register(MainRouter.self) { (r, viewController: MainViewController) in
 			let router = MainRouter()
 			router.transitionHandler = viewController
-
 			return router
 		}
 
@@ -31,7 +29,6 @@ final class MainAssemblyContainer: Assembly {
 			presenter.view = viewController
 			presenter.interactor = r.resolve(MainInteractor.self, argument: presenter)
 			presenter.router = r.resolve(MainRouter.self, argument: viewController)
-
 			return presenter
 		}
 

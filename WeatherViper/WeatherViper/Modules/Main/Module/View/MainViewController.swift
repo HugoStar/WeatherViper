@@ -9,26 +9,33 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-
-	// MARK: -
-	// MARK: Properties
-	var output: MainViewOutput!
-
-	// MARK: -
-	// MARK: Life cycle
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		output.viewIsReady()
-	}
-
+  
+  // MARK: -
+  // MARK: Outlets
+  @IBOutlet weak var tableView: UITableView!
+  
+  // MARK: -
+  // MARK: Properties
+  var output: MainViewOutput!
+  
+  // MARK: -
+  // MARK: Life cycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    output.viewIsReady()
+  }
+  
 }
 
 // MARK: -
 // MARK: MainViewInput
 extension MainViewController: MainViewInput {
-
-	func setupInitialState() {
-
-	}
-
+  
+  func setupInitialState() {
+    
+  }
+  
 }
+
+// MARK: -
+// MARK: UITableViewDataSource
