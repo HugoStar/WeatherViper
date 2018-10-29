@@ -10,13 +10,22 @@ import CoreLocation
 
 protocol ServiceCities {
   
-  func addCityWithCoordinates(_ coordinates: CLLocationCoordinate2D) -> 
-  
-  
+  func addCityWithCoordinates(_ coordinates: CLLocationCoordinate2D) -> City?
+  func addCityWithName(_ cityName: String) -> City?
+  func deleteCityWithName(_ name: String) -> City?
+
 }
 
-class CitiesManager {
+class CitiesManager: ServiceCities {
   
-  
-  
+  func addCityWithCoordinates(_ coordinates: CLLocationCoordinate2D) -> City? {
+    return nil
+  }
+  func addCityWithName(_ cityName: String) -> City? {
+    return nil
+  }
+  func deleteCityWithName(_ name: String) -> City? {
+    return nil
+  }
+
 }

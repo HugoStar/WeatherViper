@@ -7,10 +7,28 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class RealmCient {
   
-  private init() {}
-  static let shared = RealmCient()
+  static let realm = try! Realm()
   
+  static func all() -> Results<City> {
+    return realm.objects(City.self)
+  }
+  
+  @discardableResult
+  static func addCity(_ city: City) -> City {
+    try! realm.write {
+      realm.add(city)
+    }
+    return city
+  }
+  
+  static func deleteItem(_ item: City) {
+    try! realm.write {
+      realm.delete(item)
+    }
+  }
+
 }

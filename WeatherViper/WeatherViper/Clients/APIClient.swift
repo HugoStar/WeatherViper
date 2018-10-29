@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import Alamofire
 
 final class APIClient {
   
-  private init() {}
-  static let shated = APIClient()
+  private static let api_key = "0f49f454b8ae2376d58805cc4e9d5a10"
+  private static let mainURL = "https://samples.openweathermap.org/data/2.5/weather?"
   
-  private let api_key = "0f49f454b8ae2376d58805cc4e9d5a10"
-  
+  static func addCityWithName(name: String) {
+
+  }
+
 }

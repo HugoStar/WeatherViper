@@ -131,6 +131,7 @@
 			children = (
 				9A56D85F2183477900D32ECA /* Default-568h@2x.png */,
 				9A56D81C218345B100D32ECA /* WeatherViper */,
+				9A56D85B2183460B00D32ECA /* SystemFiels */,
 				9A56D831218345B200D32ECA /* WeatherViperTests */,
 				9A56D81B218345B100D32ECA /* Products */,
 				715B54024BE553B527460EFF /* Pods */,
@@ -150,11 +151,10 @@
 		9A56D81C218345B100D32ECA /* WeatherViper */ = {
 			isa = PBXGroup;
 			children = (
-				9AF5194F2187001400B7C10E /* Entities */,
+				9A56D85A218345FE00D32ECA /* Modules */,
 				9AF5194C2186FF3800B7C10E /* Services */,
 				9AF5194B2186FF3000B7C10E /* Clients */,
-				9A56D85A218345FE00D32ECA /* Modules */,
-				9A56D85B2183460B00D32ECA /* SystemFiels */,
+				9AF5194F2187001400B7C10E /* Entities */,
 				9A56D85C2183461700D32ECA /* Resources */,
 			);
 			path = WeatherViper;
@@ -669,7 +669,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MRF7464JJH;
-				INFOPLIST_FILE = "$(SRCROOT)/WeatherViper/SystemFiels/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SystemFiels/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -688,7 +688,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MRF7464JJH;
-				INFOPLIST_FILE = "$(SRCROOT)/WeatherViper/SystemFiels/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SystemFiels/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

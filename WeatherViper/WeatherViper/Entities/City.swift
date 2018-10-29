@@ -7,7 +7,15 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct City {
-  let name: String
+class City: Object {
+  @objc dynamic var id = UUID().uuidString
+  @objc dynamic var name: String = ""
+  
+  convenience init(name: String) {
+    self.init()
+    self.name = name
+  }
+
 }
