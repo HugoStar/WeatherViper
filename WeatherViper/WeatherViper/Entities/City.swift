@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class City: Object {
+class City: Object, Codable {
   @objc dynamic var id = UUID().uuidString
   @objc dynamic var name: String = ""
   

@@ -11,11 +11,24 @@ import Alamofire
 
 final class APIClient {
   
-  private static let api_key = "0f49f454b8ae2376d58805cc4e9d5a10"
-  private static let mainURL = "https://samples.openweathermap.org/data/2.5/weather?"
+  private init() {}
   
-  static func addCityWithName(name: String) {
-
+  private static let api_key = "0f49f454b8ae2376d58805cc4e9d5a10"
+  private static let mainURL = "http://api.openweathermap.org/data/2.5/weather"
+  
+  static func addCityWithName(_ name: String) {
+    let currentURL = "\(mainURL)?q=\(name)&APPID=\(api_key)"
+    Alamofire.request(URL(string: currentURL)!).responseJSON { dataResponse in
+      
+      do {
+        let city = try JSONDecoder().decode(City.self, from: dataResponse.data!)
+        print(city)
+      } catch {
+        print(error)
+      }
+      
+      print(dataResponse)
+    }
   }
 
 }
