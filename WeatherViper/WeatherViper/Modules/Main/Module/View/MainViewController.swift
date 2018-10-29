@@ -17,12 +17,14 @@ final class MainViewController: UIViewController {
   // MARK: -
   // MARK: Properties
   var output: MainViewOutput!
+  var ddm: MainDDMOutput!
   
   // MARK: -
   // MARK: Life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     output.viewIsReady()
+    tableView.dataSource = ddm.dataSourceForTableView(tableView)
   }
   
 }
@@ -38,4 +40,12 @@ extension MainViewController: MainViewInput {
 }
 
 // MARK: -
-// MARK: UITableViewDataSource
+// MARK: MainDDMInput
+extension MainViewController: MainDDMInput {
+
+  func getCountTableViewCells() -> Int {
+    return 5
+  }
+  
+  
+}

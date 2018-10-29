@@ -26,6 +26,14 @@
 		9A56D859218345F400D32ECA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A56D84E218345F400D32ECA /* MainRouter.swift */; };
 		9A56D85E218346F200D32ECA /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A56D85D218346F200D32ECA /* ApplicationAssembly.swift */; };
 		9A56D8602183477900D32ECA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A56D85F2183477900D32ECA /* Default-568h@2x.png */; };
+		9AF519432186F3E800B7C10E /* MainDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF519422186F3E800B7C10E /* MainDDM.swift */; };
+		9AF519462186F5C100B7C10E /* MainDDMOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF519452186F5C100B7C10E /* MainDDMOutput.swift */; };
+		9AF519482186F6D500B7C10E /* MainDDMInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF519472186F6D500B7C10E /* MainDDMInput.swift */; };
+		9AF5194A2186FEBC00B7C10E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF519492186FEBC00B7C10E /* APIClient.swift */; };
+		9AF5194E2186FF6000B7C10E /* ServiceCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF5194D2186FF6000B7C10E /* ServiceCities.swift */; };
+		9AF519512187004400B7C10E /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF519502187004400B7C10E /* City.swift */; };
+		9AF519532187013100B7C10E /* RealmCient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF519522187013100B7C10E /* RealmCient.swift */; };
+		9AF519552187014000B7C10E /* CoreLocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF519542187014000B7C10E /* CoreLocationClient.swift */; };
 		CD09C6D02BAE38FB2880A19D /* Pods_WeatherViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55B7507FF2DB253A61709A1 /* Pods_WeatherViper.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +73,14 @@
 		9A56D84E218345F400D32ECA /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		9A56D85D218346F200D32ECA /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
 		9A56D85F2183477900D32ECA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9AF519422186F3E800B7C10E /* MainDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDDM.swift; sourceTree = "<group>"; };
+		9AF519452186F5C100B7C10E /* MainDDMOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDDMOutput.swift; sourceTree = "<group>"; };
+		9AF519472186F6D500B7C10E /* MainDDMInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDDMInput.swift; sourceTree = "<group>"; };
+		9AF519492186FEBC00B7C10E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9AF5194D2186FF6000B7C10E /* ServiceCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCities.swift; sourceTree = "<group>"; };
+		9AF519502187004400B7C10E /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		9AF519522187013100B7C10E /* RealmCient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCient.swift; sourceTree = "<group>"; };
+		9AF519542187014000B7C10E /* CoreLocationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationClient.swift; sourceTree = "<group>"; };
 		A8887DA0F351D9E7FB46751E /* Pods-WeatherViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherViper.release.xcconfig"; path = "Target Support Files/Pods-WeatherViper/Pods-WeatherViper.release.xcconfig"; sourceTree = "<group>"; };
 		C55B7507FF2DB253A61709A1 /* Pods_WeatherViper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherViper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E942AE1B81B16C15CA1959CB /* Pods-WeatherViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherViper.debug.xcconfig"; path = "Target Support Files/Pods-WeatherViper/Pods-WeatherViper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +150,9 @@
 		9A56D81C218345B100D32ECA /* WeatherViper */ = {
 			isa = PBXGroup;
 			children = (
+				9AF5194F2187001400B7C10E /* Entities */,
+				9AF5194C2186FF3800B7C10E /* Services */,
+				9AF5194B2186FF3000B7C10E /* Clients */,
 				9A56D85A218345FE00D32ECA /* Modules */,
 				9A56D85B2183460B00D32ECA /* SystemFiels */,
 				9A56D85C2183461700D32ECA /* Resources */,
@@ -190,6 +209,7 @@
 		9A56D844218345F400D32ECA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9AF519442186F59F00B7C10E /* DDM */,
 				9A56D845218345F400D32ECA /* MainViewInput.swift */,
 				9A56D846218345F400D32ECA /* MainViewOutput.swift */,
 				9A56D847218345F400D32ECA /* MainViewController.swift */,
@@ -242,6 +262,42 @@
 				9A56D826218345B100D32ECA /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9AF519442186F59F00B7C10E /* DDM */ = {
+			isa = PBXGroup;
+			children = (
+				9AF519422186F3E800B7C10E /* MainDDM.swift */,
+				9AF519452186F5C100B7C10E /* MainDDMOutput.swift */,
+				9AF519472186F6D500B7C10E /* MainDDMInput.swift */,
+			);
+			path = DDM;
+			sourceTree = "<group>";
+		};
+		9AF5194B2186FF3000B7C10E /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				9AF519492186FEBC00B7C10E /* APIClient.swift */,
+				9AF519522187013100B7C10E /* RealmCient.swift */,
+				9AF519542187014000B7C10E /* CoreLocationClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		9AF5194C2186FF3800B7C10E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9AF5194D2186FF6000B7C10E /* ServiceCities.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9AF5194F2187001400B7C10E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9AF519502187004400B7C10E /* City.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,17 +485,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A56D854218345F400D32ECA /* MainViewController.swift in Sources */,
+				9AF5194A2186FEBC00B7C10E /* APIClient.swift in Sources */,
 				9A56D85E218346F200D32ECA /* ApplicationAssembly.swift in Sources */,
 				9A56D84F218345F400D32ECA /* MainAssemblyContainer.swift in Sources */,
 				9A56D857218345F400D32ECA /* MainInteractorInput.swift in Sources */,
 				9A56D852218345F400D32ECA /* MainViewInput.swift in Sources */,
 				9A56D853218345F400D32ECA /* MainViewOutput.swift in Sources */,
 				9A56D859218345F400D32ECA /* MainRouter.swift in Sources */,
+				9AF519482186F6D500B7C10E /* MainDDMInput.swift in Sources */,
 				9A56D81E218345B100D32ECA /* AppDelegate.swift in Sources */,
 				9A56D856218345F400D32ECA /* MainInteractor.swift in Sources */,
 				9A56D850218345F400D32ECA /* MainModuleInput.swift in Sources */,
 				9A56D855218345F400D32ECA /* MainInteractorOutput.swift in Sources */,
 				9A56D858218345F400D32ECA /* MainRouterInput.swift in Sources */,
+				9AF5194E2186FF6000B7C10E /* ServiceCities.swift in Sources */,
+				9AF519532187013100B7C10E /* RealmCient.swift in Sources */,
+				9AF519552187014000B7C10E /* CoreLocationClient.swift in Sources */,
+				9AF519432186F3E800B7C10E /* MainDDM.swift in Sources */,
+				9AF519462186F5C100B7C10E /* MainDDMOutput.swift in Sources */,
+				9AF519512187004400B7C10E /* City.swift in Sources */,
 				9A56D851218345F400D32ECA /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
