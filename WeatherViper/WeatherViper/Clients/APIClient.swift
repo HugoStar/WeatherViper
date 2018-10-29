@@ -18,17 +18,18 @@ final class APIClient {
   
   static func addCityWithName(_ name: String) {
     let currentURL = "\(mainURL)?q=\(name)&APPID=\(api_key)"
-    Alamofire.request(URL(string: currentURL)!).responseJSON { dataResponse in
-      
+    Alamofire.request(currentURL).responseData { dataResponse in
       do {
         let city = try JSONDecoder().decode(City.self, from: dataResponse.data!)
         print(city)
       } catch {
-        print(error)
+        print(error.localizedDescription)
       }
       
-      print(dataResponse)
     }
+
   }
 
 }
+
+
