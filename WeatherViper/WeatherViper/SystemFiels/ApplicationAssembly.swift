@@ -14,7 +14,8 @@ final class ApplicationAssembly {
   //Use default dependency
   class var assembler: Assembler {
     return Assembler([
-      MainAssemblyContainer()
+      MainAssemblyContainer(),
+      AddCityAssemblyContainer()
       ])
   }
   

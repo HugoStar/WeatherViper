@@ -27,6 +27,13 @@ final class MainViewController: UIViewController {
     tableView.dataSource = ddm.dataSourceForTableView(tableView)
   }
   
+  // MARK: -
+  // MARK: Actions and Changes
+  @IBAction func buttonAddCityClick(_ sender: UIBarButtonItem) {
+    output.moveToAddCityModule()
+  }
+  
+  
 }
 
 // MARK: -

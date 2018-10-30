@@ -7,33 +7,36 @@
 //
 
 final class MainPresenter: MainViewOutput {
-
-    // MARK: -
-    // MARK: Properties
-
-    weak var view: MainViewInput!
-    var interactor: MainInteractorInput!
-    var router: MainRouterInput!
-
-    // MARK: -
-    // MARK: MainViewOutput
-    func viewIsReady() {
-
-    }
-
+  
+  // MARK: -
+  // MARK: Properties
+  weak var view: MainViewInput!
+  var interactor: MainInteractorInput!
+  var router: MainRouterInput!
+  
+  // MARK: -
+  // MARK: MainViewOutput
+  func viewIsReady() {
+    
+  }
+  
+  func moveToAddCityModule() {
+    router.openAddCityModule()
+  }
+  
 }
 
 // MARK: -
 // MARK: MainInteractorOutput
 extension MainPresenter: MainInteractorOutput {
-
-
+  
+  
 }
 
 // MARK: -
 // MARK: MainModuleInput
 extension MainPresenter: MainModuleInput {
-
-
+  
+  
 }
 

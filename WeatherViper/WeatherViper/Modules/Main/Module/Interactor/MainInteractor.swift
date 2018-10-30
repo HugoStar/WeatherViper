@@ -8,6 +8,17 @@
 
 final class MainInteractor: MainInteractorInput {
 
+  //MARK: -
+  //MARK: - Properties
+
   weak var output: MainInteractorOutput!
+  var serviceCities: ServiceCities!
+  
+  
+  //MARK: -
+  //MARK: - MainInteractorInput
+
+  
+  
 
 }

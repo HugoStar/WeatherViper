@@ -57,14 +57,69 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Nqm-2A-KG1"/>
+                    <navigationItem key="navigationItem" id="Nqm-2A-KG1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EAF-YX-3e0">
+                            <connections>
+                                <action selector="buttonAddCityClick:" destination="BYZ-38-t0r" id="CDZ-mO-uir"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6f9-80-wFE" id="3k9-nU-T5A"/>
+                        <segue destination="8jT-kc-owf" kind="showDetail" identifier="addCityController" id="iB5-3O-Rh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="133.5832083958021"/>
+        </scene>
+        <!--Add City View Controller-->
+        <scene sceneID="ubf-kb-Hzi">
+            <objects>
+                <viewController id="8jT-kc-owf" customClass="AddCityViewController" customModule="WeatherViper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UGq-ot-YYC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-Mn-4Pc">
+                                <rect key="frame" x="0.0" y="198.5" width="375" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gus-X8-1CG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="AddToNameCity"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tt-5U-vvw">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="30"/>
+                                        <state key="normal" title="AddToMyGeopzition"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-de-UdA">
+                                        <rect key="frame" x="0.0" y="240" width="375" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CityName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-Wf-glX">
+                                <rect key="frame" x="0.0" y="138.5" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B7Z-Mn-4Pc" firstAttribute="centerY" secondItem="UGq-ot-YYC" secondAttribute="centerY" id="8yC-kd-5Vy"/>
+                            <constraint firstItem="bQO-PF-lVG" firstAttribute="trailing" secondItem="B7Z-Mn-4Pc" secondAttribute="trailing" id="Npm-gu-JSh"/>
+                            <constraint firstItem="bQO-PF-lVG" firstAttribute="trailing" secondItem="Cam-Wf-glX" secondAttribute="trailing" id="ZVT-sk-LfJ"/>
+                            <constraint firstItem="Cam-Wf-glX" firstAttribute="leading" secondItem="bQO-PF-lVG" secondAttribute="leading" id="fpG-Mo-wM6"/>
+                            <constraint firstItem="B7Z-Mn-4Pc" firstAttribute="leading" secondItem="bQO-PF-lVG" secondAttribute="leading" id="rjf-Hn-ouA"/>
+                            <constraint firstItem="B7Z-Mn-4Pc" firstAttribute="top" secondItem="Cam-Wf-glX" secondAttribute="bottom" constant="30" id="xml-f8-CEt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bQO-PF-lVG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYJ-By-ILs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lAo-hC-bzb">

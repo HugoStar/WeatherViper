@@ -9,5 +9,6 @@
 protocol MainViewOutput: class {
   /// - author: hugo
   func viewIsReady()
+  func moveToAddCityModule()
   
 }

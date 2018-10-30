@@ -12,9 +12,14 @@ import SwinjectStoryboard
 final class MainAssemblyContainer: Assembly {
   
   func assemble(container: Container) {
+    
+    container.register(ServiceCities.self) { _ in CitiesManager() }
+    
     container.register(MainInteractor.self) { (r, presenter: MainPresenter) in
       let interactor = MainInteractor()
       interactor.output = presenter
+      interactor.serviceCities = r.resolve(ServiceCities.self)
+      
       return interactor
     }
     

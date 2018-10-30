@@ -9,5 +9,7 @@
 import Foundation
 
 protocol MainRouterInput: class {
+  
+  func openAddCityModule()
 
 }
