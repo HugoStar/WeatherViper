@@ -17,7 +17,7 @@ final class MainPresenter: MainViewOutput {
   // MARK: -
   // MARK: MainViewOutput
   func viewIsReady() {
-    
+    interactor.loadData()
   }
   
   func moveToAddCityModule() {
@@ -43,9 +43,14 @@ extension MainPresenter: MainModuleInput {
 // MARK: -
 // MARK: MainDDMInput
 extension MainPresenter: MainDDMInput {
+  func getCityAtIndex(_ index: Int) -> City {
+    guard let city = interactor.getCityAtIndex(index: index) else { fatalError("Index Is Invalid") }
+    return city
+  }
+  
   
   func getCountTableViewCells() -> Int {
-    return 5
+    return interactor.getCountCities()
   }
   
   

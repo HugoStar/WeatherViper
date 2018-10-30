@@ -8,16 +8,28 @@
 
 final class MainInteractor: MainInteractorInput {
 
+  
   //MARK: -
   //MARK: - Properties
 
   weak var output: MainInteractorOutput!
   var serviceCities: ServiceCities!
+  var listCities: [City] = []
   
   
   //MARK: -
   //MARK: - MainInteractorInput
-
+  func loadData() {
+    listCities = serviceCities.loadCities()
+  }
+  
+  func getCountCities() -> Int {
+    return listCities.count
+  }
+  
+  func getCityAtIndex(index: Int) -> City? {
+      return listCities[index]
+  }
   
   
 

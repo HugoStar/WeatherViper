@@ -19,9 +19,10 @@ class MainDDM: NSObject, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let city = presentor.getCityAtIndex(indexPath.row)
     let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath)
-    cell.textLabel?.text = "\(indexPath.section)"
-    cell.detailTextLabel?.text = "\(indexPath.row)"
+    cell.textLabel?.text = city.name
+    cell.detailTextLabel?.text = "\(city.temperature)"
     return cell
   }
 

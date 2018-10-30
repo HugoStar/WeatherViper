@@ -10,4 +10,8 @@ import Foundation
 
 protocol MainInteractorInput: class {
 
+  func loadData()
+  func getCountCities() -> Int
+  func getCityAtIndex(index: Int) -> City?
+  
 }

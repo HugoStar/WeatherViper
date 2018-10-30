@@ -12,4 +12,6 @@ protocol MainDDMInput: class {
   
   func getCountTableViewCells() -> Int
   
+  func getCityAtIndex(_ index: Int) -> City
+  
 }

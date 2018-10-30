@@ -27,6 +27,11 @@ final class MainViewController: UIViewController {
     tableView.dataSource = ddm.dataSourceForTableView(tableView)
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    output.viewIsReady()
+  }
+  
   // MARK: -
   // MARK: Actions and Changes
   @IBAction func buttonAddCityClick(_ sender: UIBarButtonItem) {

@@ -13,10 +13,18 @@ protocol ServiceCities {
   func addCityWithCoordinates(_ coordinates: CLLocationCoordinate2D) -> City?
   func addCityWithName(_ cityName: String) -> City?
   func deleteCityWithName(_ name: String) -> City?
+  
+  func loadCities() -> [City]
 
 }
 
 class CitiesManager: ServiceCities {
+  
+  
+  func loadCities() -> [City] {
+    return []
+  }
+  
   
   func addCityWithCoordinates(_ coordinates: CLLocationCoordinate2D) -> City? {
     return nil
