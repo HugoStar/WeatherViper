@@ -9,27 +9,56 @@
 import Foundation
 import Alamofire
 
+typealias CityResponse = (_ city: City?, _ error: Error?) -> ()
+private typealias NETResponce = (_ dataResponse: Data?, _ error: Error?) -> ()
+
 final class APIClient {
-  
   private init() {}
   
   private static let api_key = "0f49f454b8ae2376d58805cc4e9d5a10"
   private static let mainURL = "http://api.openweathermap.org/data/2.5/weather"
   
-  static func addCityWithName(_ name: String) {
-    let currentURL = "\(mainURL)?q=\(name)&APPID=\(api_key)"
-    Alamofire.request(currentURL).responseData { dataResponse in
-      do {
-        let city = try JSONDecoder().decode(City.self, from: dataResponse.data!)
-        print(city)
-      } catch {
-        print(error.localizedDescription)
-      }
+    static func addCityWithName(_ name: String, callBack: @escaping CityResponse) {
+      let currentURL = "\(mainURL)?q=\(name)&units=metric&APPID=\(api_key)"
       
-    }
+      NetClient.getDataWithURL(currentURL) { data, error in
+        
+        guard let data = data else { return }
+        let city = try? City.decode(data: data)
+        callBack(city, nil)
+      }
+  
 
+    }
+}
+
+
+private class NetClient {
+ 
+  enum NETError: Error {
+    case uncorrectURL
   }
 
+  private init() {}
+  static func getDataWithURL(_ url: String, response: @escaping NETResponce) {
+    guard let url = URL(string: url) else {
+      response(nil, NETError.uncorrectURL)
+      return
+    }
+    Alamofire.request(url).responseJSON { dataResponse in
+      switch dataResponse.response!.statusCode {
+      case 200 ... 299:
+        response(dataResponse.data!, nil)
+      default:
+        print(dataResponse)
+      }
+    }
+  }
 }
+
+
+
+
+
 
 

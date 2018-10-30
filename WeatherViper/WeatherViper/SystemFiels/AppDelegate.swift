@@ -17,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    APIClient.addCityWithName("Moscow")
+    APIClient.addCityWithName("Sochi") { (city, error) in
+      if city != nil {
+        print(city!)
+      } else {
+        print(error!)
+      }
+    }
     
     return true
   }

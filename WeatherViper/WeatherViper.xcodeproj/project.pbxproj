@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0635DF050979D533DED6D8E4 /* Pods_WeatherViperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F088721B06D863233F19C4 /* Pods_WeatherViperTests.framework */; };
+		9A4CE738218851840052F724 /* Decodeble+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4CE737218851840052F724 /* Decodeble+Decode.swift */; };
 		9A56D81E218345B100D32ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A56D81D218345B100D32ECA /* AppDelegate.swift */; };
 		9A56D823218345B100D32ECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A56D821218345B100D32ECA /* Main.storyboard */; };
 		9A56D825218345B100D32ECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A56D824218345B100D32ECA /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		01F088721B06D863233F19C4 /* Pods_WeatherViperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherViperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18615A0DB5D447A084BD9C7E /* Pods-WeatherViperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherViperTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherViperTests/Pods-WeatherViperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3886A4087361336470D24020 /* Pods-WeatherViperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherViperTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherViperTests/Pods-WeatherViperTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A4CE737218851840052F724 /* Decodeble+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodeble+Decode.swift"; sourceTree = "<group>"; };
 		9A56D81A218345B100D32ECA /* WeatherViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A56D81D218345B100D32ECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A56D822218345B100D32ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9A4CE73621884EE80052F724 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				9A4CE737218851840052F724 /* Decodeble+Decode.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		9A56D811218345B100D32ECA = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 				9AF5194C2186FF3800B7C10E /* Services */,
 				9AF5194B2186FF3000B7C10E /* Clients */,
 				9AF5194F2187001400B7C10E /* Entities */,
+				9A4CE73621884EE80052F724 /* Extentions */,
 				9A56D85C2183461700D32ECA /* Resources */,
 				9A56D85B2183460B00D32ECA /* SystemFiels */,
 			);
@@ -505,6 +516,7 @@
 				9AF519462186F5C100B7C10E /* MainDDMOutput.swift in Sources */,
 				9AF519512187004400B7C10E /* City.swift in Sources */,
 				9A56D851218345F400D32ECA /* MainPresenter.swift in Sources */,
+				9A4CE738218851840052F724 /* Decodeble+Decode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
