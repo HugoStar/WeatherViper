@@ -9,7 +9,6 @@
 import LightRoute
 
 final class AddCityRouter: AddCityRouterInput {
-
   weak var transitionHandler: TransitionHandler!
 
 }

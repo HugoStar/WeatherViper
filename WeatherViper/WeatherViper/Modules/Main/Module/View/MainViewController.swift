@@ -45,14 +45,3 @@ extension MainViewController: MainViewInput {
   }
   
 }
-
-// MARK: -
-// MARK: MainDDMInput
-extension MainViewController: MainDDMInput {
-
-  func getCountTableViewCells() -> Int {
-    return 5
-  }
-  
-  
-}

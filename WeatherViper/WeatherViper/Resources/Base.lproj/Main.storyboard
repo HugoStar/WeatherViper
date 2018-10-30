@@ -95,6 +95,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-de-UdA">
                                         <rect key="frame" x="0.0" y="240" width="375" height="30"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="didClickCancelButton:" destination="8jT-kc-owf" eventType="touchUpInside" id="kZ9-P6-JG1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -19,8 +19,13 @@ final class MainAssemblyContainer: Assembly {
       let interactor = MainInteractor()
       interactor.output = presenter
       interactor.serviceCities = r.resolve(ServiceCities.self)
-      
       return interactor
+    }
+    
+    container.register(MainDDM.self) { (r, viewController: MainViewController) in
+      let ddm = MainDDM()
+      ddm.presentor = r.resolve(MainPresenter.self, argument: viewController)
+      return ddm
     }
     
     container.register(MainRouter.self) { (r, viewController: MainViewController) in
@@ -36,14 +41,6 @@ final class MainAssemblyContainer: Assembly {
       presenter.router = r.resolve(MainRouter.self, argument: viewController)
       return presenter
     }
-    
-    container.register(MainDDM.self) { (r, viewController: MainViewController) in
-      let ddm = MainDDM()
-      ddm.view = viewController
-      return ddm
-    }
-    
-    
     
     container.storyboardInitCompleted(MainViewController.self) { r, viewController in
       viewController.output = r.resolve(MainPresenter.self, argument: viewController)

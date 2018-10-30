@@ -9,26 +9,28 @@
 import UIKit
 
 final class AddCityViewController: UIViewController {
-
-	// MARK: -
-	// MARK: Properties
-	var output: AddCityViewOutput!
-
-	// MARK: -
-	// MARK: Life cycle
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		output.viewIsReady()
-	}
-
+  
+  // MARK: -
+  // MARK: Properties
+  var output: AddCityViewOutput!
+  
+  // MARK: -
+  // MARK: Life cycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    output.viewIsReady()
+  }
+  
+  // MARK: -
+  // MARK: Action
+  @IBAction func didClickCancelButton(_ sender: UIButton) {
+    self.dismiss(animated: true)
+  }
 }
 
 // MARK: -
 // MARK: AddCityViewInput
 extension AddCityViewController: AddCityViewInput {
-
-	func setupInitialState() {
-
-	}
-
+  func setupInitialState() {
+  }
 }

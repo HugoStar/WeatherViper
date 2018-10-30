@@ -40,3 +40,14 @@ extension MainPresenter: MainModuleInput {
   
 }
 
+// MARK: -
+// MARK: MainDDMInput
+extension MainPresenter: MainDDMInput {
+  
+  func getCountTableViewCells() -> Int {
+    return 5
+  }
+  
+  
+}
+

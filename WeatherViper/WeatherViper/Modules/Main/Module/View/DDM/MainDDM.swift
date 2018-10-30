@@ -10,13 +10,12 @@ import UIKit
 
 class MainDDM: NSObject, UITableViewDataSource {
   
-  weak var view: MainDDMInput!
+  weak var presentor: MainDDMInput!
 
   // MARK: -
   // MARK: UITableViewDataSource
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
-    return 5
+    return presentor.getCountTableViewCells()
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
