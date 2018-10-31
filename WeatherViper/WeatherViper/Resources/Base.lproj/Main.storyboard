@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-80-wFE">
-                                <rect key="frame" x="0.0" y="63.999999999999993" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityCell" textLabel="92b-0H-Tas" detailTextLabel="cwG-gN-aHg" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="pKX-J5-9XE">
@@ -95,7 +95,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RKp-k5-EK1" secondAttribute="height" multiplier="1:1" id="38U-7o-6Sc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Flaticon" family="Flaticon" pointSize="220"/>
+                                <fontDescription key="fontDescription" name="Flaticon" family="Flaticon" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -111,7 +111,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRG-Gw-dfV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="H" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRG-Gw-dfV">
                                 <rect key="frame" x="371" y="126" width="23" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -120,19 +120,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JRG-Gw-dfV" firstAttribute="trailing" secondItem="RKp-k5-EK1" secondAttribute="trailing" id="ChM-XJ-4l4"/>
                             <constraint firstItem="RKp-k5-EK1" firstAttribute="top" secondItem="JRG-Gw-dfV" secondAttribute="bottom" constant="16" id="HqO-TR-zam"/>
+                            <constraint firstItem="v6P-Oq-unZ" firstAttribute="leading" secondItem="xKo-qk-A6f" secondAttribute="leading" constant="20" id="Ipk-yA-Uyi"/>
                             <constraint firstItem="awL-DE-qYo" firstAttribute="leading" secondItem="Kz8-Ze-80R" secondAttribute="leading" id="QiU-Vu-2eM"/>
                             <constraint firstItem="xKo-qk-A6f" firstAttribute="trailing" secondItem="RKp-k5-EK1" secondAttribute="trailing" constant="20" id="Y6W-Mw-95C"/>
+                            <constraint firstItem="JRG-Gw-dfV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v6P-Oq-unZ" secondAttribute="trailing" constant="8" symbolic="YES" id="Z2j-pq-cDv"/>
                             <constraint firstItem="awL-DE-qYo" firstAttribute="top" secondItem="RKp-k5-EK1" secondAttribute="bottom" constant="16" id="bvK-MI-m22"/>
+                            <constraint firstItem="xKo-qk-A6f" firstAttribute="trailing" secondItem="JRG-Gw-dfV" secondAttribute="trailing" constant="20" id="e5j-ws-jmz"/>
                             <constraint firstItem="RKp-k5-EK1" firstAttribute="centerY" secondItem="Kz8-Ze-80R" secondAttribute="centerY" id="eMr-dT-BBo"/>
                             <constraint firstItem="RKp-k5-EK1" firstAttribute="top" secondItem="v6P-Oq-unZ" secondAttribute="bottom" constant="16" id="lOS-mu-jD6"/>
                             <constraint firstItem="xKo-qk-A6f" firstAttribute="trailing" secondItem="awL-DE-qYo" secondAttribute="trailing" id="pas-xD-3XL"/>
                             <constraint firstItem="RKp-k5-EK1" firstAttribute="leading" secondItem="xKo-qk-A6f" secondAttribute="leading" constant="20" id="w2W-CN-v9V"/>
-                            <constraint firstItem="RKp-k5-EK1" firstAttribute="leading" secondItem="v6P-Oq-unZ" secondAttribute="leading" id="yG7-98-R03"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xKo-qk-A6f"/>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="awL-DE-qYo" id="QT9-eX-jtq"/>
+                        <outlet property="humidityLabel" destination="JRG-Gw-dfV" id="W8O-PU-yg7"/>
+                        <outlet property="iconLabel" destination="RKp-k5-EK1" id="3ak-lK-0ug"/>
+                        <outlet property="tempLabel" destination="v6P-Oq-unZ" id="h51-gx-Fwl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJS-Bu-QER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

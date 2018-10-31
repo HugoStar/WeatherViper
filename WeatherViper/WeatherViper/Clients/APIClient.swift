@@ -20,6 +20,7 @@ final class APIClient {
   
   static func addCityWithName(_ name: String, callBack: @escaping CityResponse) {
     let currentURL = "\(mainURL)?q=\(name)&units=metric&APPID=\(api_key)"
+    
     NetClient.getDataWithURL(currentURL) { data, error in
       guard let data = data else { callBack(nil, error); return  }
       let city = try? City.decode(data: data)
@@ -43,6 +44,7 @@ private class NetClient {
       return
     }
     Alamofire.request(url).responseJSON { dataResponse in
+
       switch dataResponse.response!.statusCode {
       case 200 ... 299:
         response(dataResponse.data!, nil)

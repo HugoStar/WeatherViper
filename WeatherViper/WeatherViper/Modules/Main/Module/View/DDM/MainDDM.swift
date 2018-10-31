@@ -22,7 +22,7 @@ class MainDDM: NSObject, UITableViewDataSource, UITableViewDelegate {
     let city = presentor.getCityAtIndex(indexPath.row)
     let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath)
     cell.textLabel?.text = city.name
-    cell.detailTextLabel?.text = "\(city.temperature)"
+    cell.detailTextLabel?.text = "temp: \(city.temperature)° C"
     return cell
   }
   

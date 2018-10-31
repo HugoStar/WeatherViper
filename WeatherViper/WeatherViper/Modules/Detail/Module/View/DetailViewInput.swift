@@ -8,5 +8,8 @@
 
 protocol DetailViewInput: class {
   /// - author: hugo
-  func setupInitialState()
+  func setTempString(temp: String)
+  func setIconString(icon: String)
+  func setHumidity(humidity: String)
+  func setCityName(cityName: String)
 }
