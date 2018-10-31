@@ -10,5 +10,9 @@ import LightRoute
 
 final class AddCityRouter: AddCityRouterInput {
   weak var transitionHandler: TransitionHandler!
+  
+  func clouseCurrentModule() {
+    try! transitionHandler.closeCurrentModule().perform()
+  }
 
 }

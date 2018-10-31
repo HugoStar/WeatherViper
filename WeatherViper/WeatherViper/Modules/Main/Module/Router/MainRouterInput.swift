@@ -10,6 +10,7 @@ import Foundation
 
 protocol MainRouterInput: class {
   
-  func openAddCityModule()
+  func openAddCityModuleWithModuleOutput(_ modulOutput: MainModuleOutput)
+  func showDetailCityModuleWithCity(_ city: City)
 
 }

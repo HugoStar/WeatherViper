@@ -15,7 +15,8 @@ final class ApplicationAssembly {
   class var assembler: Assembler {
     return Assembler([
       MainAssemblyContainer(),
-      AddCityAssemblyContainer()
+      AddCityAssemblyContainer(),
+      DetailAssemblyContainer()
       ])
   }
   

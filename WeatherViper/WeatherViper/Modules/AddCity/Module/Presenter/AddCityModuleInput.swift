@@ -8,4 +8,6 @@
 
 protocol AddCityModuleInput: class {
 
+  var moduleOuput: MainModuleOutput! { set get }
+
 }

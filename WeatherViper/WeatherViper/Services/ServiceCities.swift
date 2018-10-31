@@ -11,7 +11,7 @@ import CoreLocation
 protocol ServiceCities {
   
   func addCityWithCoordinates(_ coordinates: CLLocationCoordinate2D) -> City?
-  func addCityWithName(_ cityName: String) -> City?
+  func addCityWithName(_ cityName: String, responce: @escaping CityResponse)
   func deleteCityWithName(_ name: String) -> City?
   
   func loadCities() -> [City]
@@ -19,17 +19,20 @@ protocol ServiceCities {
 }
 
 class CitiesManager: ServiceCities {
-  
-  
+
   func loadCities() -> [City] {
-    return []
+    return RealmCient.all()
   }
-  
+
+  func addCityWithName(_ cityName: String, responce: @escaping CityResponse) {
+    APIClient.addCityWithName(cityName) { city, error in
+      guard let city = city else { responce(nil, error!); return }
+      RealmCient.addCity(city)
+      responce(city, nil)
+    }
+  }
   
   func addCityWithCoordinates(_ coordinates: CLLocationCoordinate2D) -> City? {
-    return nil
-  }
-  func addCityWithName(_ cityName: String) -> City? {
     return nil
   }
   func deleteCityWithName(_ name: String) -> City? {

@@ -9,5 +9,9 @@
 import Foundation
 
 protocol AddCityInteractorOutput: class {
+  
+  func incorrectName()
+  func cityIsAdd(cityName: String)
+  func errorAddCity(error: String)
 
 }

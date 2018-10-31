@@ -19,7 +19,7 @@ class City: Object, Decodable {
   
   
   override static func primaryKey() -> String? {
-    return "UID"
+    return "name"
   }
   
   convenience init(name: String, temperature: Double) {

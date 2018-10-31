@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="omw-Xi-5qQ">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,18 +14,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WeatherViper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-80-wFE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityCell" textLabel="92b-0H-Tas" detailTextLabel="cwG-gN-aHg" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="pKX-J5-9XE">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pKX-J5-9XE" id="eDT-ky-eP1">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="92b-0H-Tas">
@@ -66,34 +66,49 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6f9-80-wFE" id="3k9-nU-T5A"/>
-                        <segue destination="8jT-kc-owf" kind="showDetail" identifier="addCityController" id="iB5-3O-Rh9"/>
+                        <segue destination="8jT-kc-owf" kind="showDetail" identifier="AddCityController" id="iB5-3O-Rh9"/>
+                        <segue destination="ueS-Ma-CzA" kind="show" identifier="DetailCityController" id="TSK-JO-D7i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="133.5832083958021"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="H05-eG-u7k">
+            <objects>
+                <viewController id="ueS-Ma-CzA" customClass="DetailViewController" customModule="WeatherViper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kz8-Ze-80R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xKo-qk-A6f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJS-Bu-QER" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="427"/>
+        </scene>
         <!--Add City View Controller-->
         <scene sceneID="ubf-kb-Hzi">
             <objects>
                 <viewController id="8jT-kc-owf" customClass="AddCityViewController" customModule="WeatherViper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UGq-ot-YYC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-Mn-4Pc">
-                                <rect key="frame" x="0.0" y="198.5" width="375" height="270"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-Mn-4Pc">
+                                <rect key="frame" x="70" y="229" width="180" height="110"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gus-X8-1CG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
-                                        <state key="normal" title="AddToNameCity"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tt-5U-vvw">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="30"/>
-                                        <state key="normal" title="AddToMyGeopzition"/>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gus-X8-1CG">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="30"/>
+                                        <state key="normal" title="AddCity"/>
+                                        <connections>
+                                            <action selector="buttonAddToNameClick:" destination="8jT-kc-owf" eventType="touchUpInside" id="EHO-Gc-53t"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-de-UdA">
-                                        <rect key="frame" x="0.0" y="240" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="80" width="180" height="30"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
                                             <action selector="didClickCancelButton:" destination="8jT-kc-owf" eventType="touchUpInside" id="kZ9-P6-JG1"/>
@@ -102,27 +117,53 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CityName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-Wf-glX">
-                                <rect key="frame" x="0.0" y="138.5" width="375" height="30"/>
+                                <rect key="frame" x="8" y="100" width="304" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8jT-kc-owf" id="NWP-w5-zRd"/>
+                                </connections>
                             </textField>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xc2-Wr-KOy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FWZ-ii-cCw">
+                                        <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.75319102112676062" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FWZ-ii-cCw" firstAttribute="centerY" secondItem="Xc2-Wr-KOy" secondAttribute="centerY" id="VHo-Sp-F2l"/>
+                                    <constraint firstItem="FWZ-ii-cCw" firstAttribute="centerX" secondItem="Xc2-Wr-KOy" secondAttribute="centerX" id="eLo-zc-gh2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="B7Z-Mn-4Pc" firstAttribute="centerY" secondItem="UGq-ot-YYC" secondAttribute="centerY" id="8yC-kd-5Vy"/>
-                            <constraint firstItem="bQO-PF-lVG" firstAttribute="trailing" secondItem="B7Z-Mn-4Pc" secondAttribute="trailing" id="Npm-gu-JSh"/>
-                            <constraint firstItem="bQO-PF-lVG" firstAttribute="trailing" secondItem="Cam-Wf-glX" secondAttribute="trailing" id="ZVT-sk-LfJ"/>
-                            <constraint firstItem="Cam-Wf-glX" firstAttribute="leading" secondItem="bQO-PF-lVG" secondAttribute="leading" id="fpG-Mo-wM6"/>
-                            <constraint firstItem="B7Z-Mn-4Pc" firstAttribute="leading" secondItem="bQO-PF-lVG" secondAttribute="leading" id="rjf-Hn-ouA"/>
-                            <constraint firstItem="B7Z-Mn-4Pc" firstAttribute="top" secondItem="Cam-Wf-glX" secondAttribute="bottom" constant="30" id="xml-f8-CEt"/>
+                            <constraint firstItem="Xc2-Wr-KOy" firstAttribute="leading" secondItem="bQO-PF-lVG" secondAttribute="leading" id="Bal-wr-lx2"/>
+                            <constraint firstItem="Xc2-Wr-KOy" firstAttribute="trailing" secondItem="bQO-PF-lVG" secondAttribute="trailing" id="Cdz-6e-X55"/>
+                            <constraint firstItem="bQO-PF-lVG" firstAttribute="trailing" secondItem="B7Z-Mn-4Pc" secondAttribute="trailing" constant="70" id="Npm-gu-JSh"/>
+                            <constraint firstItem="bQO-PF-lVG" firstAttribute="trailing" secondItem="Cam-Wf-glX" secondAttribute="trailing" constant="8" id="ZVT-sk-LfJ"/>
+                            <constraint firstItem="Cam-Wf-glX" firstAttribute="leading" secondItem="bQO-PF-lVG" secondAttribute="leading" constant="8" id="fpG-Mo-wM6"/>
+                            <constraint firstItem="Cam-Wf-glX" firstAttribute="top" secondItem="bQO-PF-lVG" secondAttribute="top" constant="80" id="gvY-Jn-XSZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Xc2-Wr-KOy" secondAttribute="bottom" id="i5W-Ap-e7s"/>
+                            <constraint firstItem="B7Z-Mn-4Pc" firstAttribute="leading" secondItem="bQO-PF-lVG" secondAttribute="leading" constant="70" id="rjf-Hn-ouA"/>
+                            <constraint firstItem="Xc2-Wr-KOy" firstAttribute="top" secondItem="UGq-ot-YYC" secondAttribute="top" id="vul-b9-w1u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bQO-PF-lVG"/>
                     </view>
+                    <connections>
+                        <outlet property="activityView" destination="Xc2-Wr-KOy" id="9VO-Ie-GUC"/>
+                        <outlet property="buttonAddToName" destination="Gus-X8-1CG" id="g2S-XJ-zmo"/>
+                        <outlet property="buttonCancel" destination="bfz-de-UdA" id="yGn-5k-muL"/>
+                        <outlet property="textField" destination="Cam-Wf-glX" id="ts4-MB-NLS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYJ-By-ILs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1946" y="134"/>
+            <point key="canvasLocation" x="1883" y="-269"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lAo-hC-bzb">
@@ -130,7 +171,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="omw-Xi-5qQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="enk-ZR-QmM">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -11,7 +11,14 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
-  var window: UIWindow?
+  var customWindow: CustomWindow?
+  var window: UIWindow? {
+    get {
+      customWindow = customWindow ?? CustomWindow(frame: UIScreen.main.bounds)
+      return customWindow
+    }
+    set { }
+  }
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.

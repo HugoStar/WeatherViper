@@ -9,5 +9,7 @@
 import Foundation
 
 protocol AddCityInteractorInput: class {
+  
+  func addCityWithName(name: String)
 
 }

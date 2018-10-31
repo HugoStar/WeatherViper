@@ -7,7 +7,7 @@
 //
 
 final class MainPresenter: MainViewOutput {
-  
+
   // MARK: -
   // MARK: Properties
   weak var view: MainViewInput!
@@ -18,10 +18,11 @@ final class MainPresenter: MainViewOutput {
   // MARK: MainViewOutput
   func viewIsReady() {
     interactor.loadData()
+    view.setupInitialState()
   }
   
   func moveToAddCityModule() {
-    router.openAddCityModule()
+    router.openAddCityModuleWithModuleOutput(self)
   }
   
 }
@@ -54,5 +55,9 @@ extension MainPresenter: MainDDMInput {
   }
   
   
+}
+
+extension MainPresenter: MainModuleOutput {
+
 }
 

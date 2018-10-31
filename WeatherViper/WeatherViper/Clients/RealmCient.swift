@@ -13,14 +13,15 @@ final class RealmCient {
   
   static let realm = try! Realm()
   
-  static func all() -> Results<City> {
-    return realm.objects(City.self)
+  static func all() -> [City] {
+    let result = realm.objects(City.self)
+    return Array(result)
   }
   
   @discardableResult
   static func addCity(_ city: City) -> City {
     try! realm.write {
-      realm.add(city)
+      realm.add(city, update: true)
     }
     return city
   }

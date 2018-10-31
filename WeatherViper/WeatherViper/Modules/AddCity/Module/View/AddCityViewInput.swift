@@ -8,5 +8,13 @@
 
 protocol AddCityViewInput: class {
   /// - author: hugo
-  func setupInitialState()
+  func showErrorForIncorrectName()
+  func hideActivityView()
+  func clearTextField()
+  
+  
+  //City
+  func showAlertCityIsAdd(cityName: String)
+  func showAlertErrorCityAdd(error: String)
+  
 }

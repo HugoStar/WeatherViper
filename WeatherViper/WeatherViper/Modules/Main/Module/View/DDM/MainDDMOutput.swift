@@ -11,5 +11,6 @@ import UIKit
 protocol MainDDMOutput: class {
   
   func dataSourceForTableView(_ tableView: UITableView) -> UITableViewDataSource
+  func delegateForTableView(_ tableView: UITableView) -> UITableViewDelegate
   
 }

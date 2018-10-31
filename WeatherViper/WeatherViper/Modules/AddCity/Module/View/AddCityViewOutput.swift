@@ -8,5 +8,10 @@
 
 protocol AddCityViewOutput: class {
   /// - author: hugo
+  var currentTextInTextField: String? { set get }
+  
   func viewIsReady()
+  func cancelButtonClick()
+  func addCityToNameClick()
+  
 }

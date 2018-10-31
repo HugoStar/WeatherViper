@@ -13,14 +13,23 @@ final class MainRouter: MainRouterInput {
   //MARK: -
   //MARK: Properties
   weak var transitionHandler: TransitionHandler!
-  let addCityModuleID = "addCityController"
+  let addCityModuleID = "AddCityController"
+  let detailCityModulerID = "DetailCityController"
   
   //MARK: -
   //MARK: MainRouterInput
-  func openAddCityModule() {
+  func openAddCityModuleWithModuleOutput(_ modulOutput: MainModuleOutput) {
     try! transitionHandler.forSegue(identifier: addCityModuleID, to: AddCityModuleInput.self).then({ modulInput in
-      return nil
+      modulInput.moduleOuput = modulOutput
     })
   }
+  
+  func showDetailCityModuleWithCity(_ city: City) {
+    try! transitionHandler.forSegue(identifier: detailCityModulerID, to: DetailModuleInput.self).then({ moduleInput in
+      moduleInput.configure(with: city)
+    })
+  }
+  
 
+  
 }

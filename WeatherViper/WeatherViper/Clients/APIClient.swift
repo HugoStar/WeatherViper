@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-typealias CityResponse = (_ city: City?, _ error: Error?) -> ()
+
 private typealias NETResponce = (_ dataResponse: Data?, _ error: Error?) -> ()
 
 final class APIClient {

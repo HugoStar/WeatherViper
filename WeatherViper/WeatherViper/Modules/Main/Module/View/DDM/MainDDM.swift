@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainDDM: NSObject, UITableViewDataSource {
+class MainDDM: NSObject, UITableViewDataSource, UITableViewDelegate {
   
   weak var presentor: MainDDMInput!
 
@@ -25,11 +25,21 @@ class MainDDM: NSObject, UITableViewDataSource {
     cell.detailTextLabel?.text = "\(city.temperature)"
     return cell
   }
+  
+  // MARK: -
+  // MARK: UITableViewDelegate
+  
 
 }
 
 extension MainDDM: MainDDMOutput {
+  func delegateForTableView(_ tableView: UITableView) -> UITableViewDelegate {
+    return self
+  }
+  
   func dataSourceForTableView(_ tableView: UITableView) -> UITableViewDataSource {
     return self
   }
+  
+  
 }
