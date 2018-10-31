@@ -10,8 +10,14 @@ import UIKit
 
 protocol MainDDMInput: class {
   
-  func getCountTableViewCells() -> Int
+  //MARK: -
+  //MARK: DataSource
   
+  func getCountTableViewCells() -> Int
   func getCityAtIndex(_ index: Int) -> City
+  
+  //MARK: -
+  //MARK: Delegate
+  func showDetailCity(city: City)
   
 }

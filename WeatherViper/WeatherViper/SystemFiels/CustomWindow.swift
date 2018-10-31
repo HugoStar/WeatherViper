@@ -22,6 +22,7 @@ class CustomWindow: UIWindow {
   
   private func customInit() {
     let tapGesterForHideKeyboard = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+    tapGesterForHideKeyboard.cancelsTouchesInView = false
     self.addGestureRecognizer(tapGesterForHideKeyboard)
   }
 

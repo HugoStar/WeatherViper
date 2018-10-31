@@ -28,6 +28,11 @@ class MainDDM: NSObject, UITableViewDataSource, UITableViewDelegate {
   
   // MARK: -
   // MARK: UITableViewDelegate
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    let city = presentor.getCityAtIndex(indexPath.row)
+    presentor.showDetailCity(city: city)
+  }
   
 
 }

@@ -44,14 +44,24 @@ extension MainPresenter: MainModuleInput {
 // MARK: -
 // MARK: MainDDMInput
 extension MainPresenter: MainDDMInput {
+  
+  //MARK: -
+  //MARK: DataSource
+  
   func getCityAtIndex(_ index: Int) -> City {
     guard let city = interactor.getCityAtIndex(index: index) else { fatalError("Index Is Invalid") }
     return city
   }
   
-  
   func getCountTableViewCells() -> Int {
     return interactor.getCountCities()
+  }
+  
+  //MARK: -
+  //MARK: Delegate
+  
+  func showDetailCity(city: City) {
+    router.showDetailCityModuleWithCity(city)
   }
   
   

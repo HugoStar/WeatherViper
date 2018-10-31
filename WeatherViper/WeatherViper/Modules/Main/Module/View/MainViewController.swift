@@ -26,6 +26,7 @@ final class MainViewController: UIViewController {
     output.viewIsReady()
     tableView.dataSource = ddm.dataSourceForTableView(tableView)
     tableView.delegate = ddm.delegateForTableView(tableView)
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="omw-Xi-5qQ">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,35 +8,40 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="weather.ttf">
+            <string>Flaticon</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WeatherViper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6f9-80-wFE">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="63.999999999999993" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CityCell" textLabel="92b-0H-Tas" detailTextLabel="cwG-gN-aHg" rowHeight="56" style="IBUITableViewCellStyleSubtitle" id="pKX-J5-9XE">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="56"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pKX-J5-9XE" id="eDT-ky-eP1">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="55.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="92b-0H-Tas">
-                                                    <rect key="frame" x="15" y="10" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cwG-gN-aHg">
-                                                    <rect key="frame" x="15" y="31.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -46,6 +51,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Hyy-r5-ZaU"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,36 +87,77 @@
             <objects>
                 <viewController id="ueS-Ma-CzA" customClass="DetailViewController" customModule="WeatherViper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kz8-Ze-80R">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-k5-EK1">
+                                <rect key="frame" x="20" y="181" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RKp-k5-EK1" secondAttribute="height" multiplier="1:1" id="38U-7o-6Sc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Flaticon" family="Flaticon" pointSize="220"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awL-DE-qYo">
+                                <rect key="frame" x="0.0" y="571" width="414" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6P-Oq-unZ">
+                                <rect key="frame" x="20" y="126" width="19" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRG-Gw-dfV">
+                                <rect key="frame" x="371" y="126" width="23" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JRG-Gw-dfV" firstAttribute="trailing" secondItem="RKp-k5-EK1" secondAttribute="trailing" id="ChM-XJ-4l4"/>
+                            <constraint firstItem="RKp-k5-EK1" firstAttribute="top" secondItem="JRG-Gw-dfV" secondAttribute="bottom" constant="16" id="HqO-TR-zam"/>
+                            <constraint firstItem="awL-DE-qYo" firstAttribute="leading" secondItem="Kz8-Ze-80R" secondAttribute="leading" id="QiU-Vu-2eM"/>
+                            <constraint firstItem="xKo-qk-A6f" firstAttribute="trailing" secondItem="RKp-k5-EK1" secondAttribute="trailing" constant="20" id="Y6W-Mw-95C"/>
+                            <constraint firstItem="awL-DE-qYo" firstAttribute="top" secondItem="RKp-k5-EK1" secondAttribute="bottom" constant="16" id="bvK-MI-m22"/>
+                            <constraint firstItem="RKp-k5-EK1" firstAttribute="centerY" secondItem="Kz8-Ze-80R" secondAttribute="centerY" id="eMr-dT-BBo"/>
+                            <constraint firstItem="RKp-k5-EK1" firstAttribute="top" secondItem="v6P-Oq-unZ" secondAttribute="bottom" constant="16" id="lOS-mu-jD6"/>
+                            <constraint firstItem="xKo-qk-A6f" firstAttribute="trailing" secondItem="awL-DE-qYo" secondAttribute="trailing" id="pas-xD-3XL"/>
+                            <constraint firstItem="RKp-k5-EK1" firstAttribute="leading" secondItem="xKo-qk-A6f" secondAttribute="leading" constant="20" id="w2W-CN-v9V"/>
+                            <constraint firstItem="RKp-k5-EK1" firstAttribute="leading" secondItem="v6P-Oq-unZ" secondAttribute="leading" id="yG7-98-R03"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xKo-qk-A6f"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJS-Bu-QER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="427"/>
+            <point key="canvasLocation" x="1954" y="439"/>
         </scene>
         <!--Add City View Controller-->
         <scene sceneID="ubf-kb-Hzi">
             <objects>
                 <viewController id="8jT-kc-owf" customClass="AddCityViewController" customModule="WeatherViper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UGq-ot-YYC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-Mn-4Pc">
-                                <rect key="frame" x="70" y="229" width="180" height="110"/>
+                                <rect key="frame" x="70" y="313" width="274" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gus-X8-1CG">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
                                         <state key="normal" title="AddCity"/>
                                         <connections>
                                             <action selector="buttonAddToNameClick:" destination="8jT-kc-owf" eventType="touchUpInside" id="EHO-Gc-53t"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-de-UdA">
-                                        <rect key="frame" x="0.0" y="80" width="180" height="30"/>
+                                        <rect key="frame" x="0.0" y="80" width="274" height="30"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
                                             <action selector="didClickCancelButton:" destination="8jT-kc-owf" eventType="touchUpInside" id="kZ9-P6-JG1"/>
@@ -117,7 +166,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CityName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-Wf-glX">
-                                <rect key="frame" x="8" y="100" width="304" height="30"/>
+                                <rect key="frame" x="8" y="100" width="398" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
@@ -126,10 +175,10 @@
                                 </connections>
                             </textField>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xc2-Wr-KOy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FWZ-ii-cCw">
-                                        <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                                        <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.75319102112676062" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,7 +220,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="omw-Xi-5qQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="enk-ZR-QmM">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
